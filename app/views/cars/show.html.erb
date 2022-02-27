@@ -1,0 +1,51 @@
+<p id="notice"><%= notice %></p>
+
+
+<% @car.images.each do |image| %>
+<div>
+	<%= image_tag(image, width: "50%") %>
+</div>
+<% end %>
+
+<p>
+  <strong>Model:</strong>
+  <%= @car.Model %>
+</p>
+
+<p>
+  <strong>Engine type:</strong>
+  <%= @car.Engine_Type %>
+</p>
+
+<p>
+  <strong>Drive type:</strong>
+  <%= @car.Drive_Type %>
+</p>
+
+<p>
+  <strong>Transmission:</strong>
+  <%= @car.Transmission %>
+</p>
+
+<p>
+  <strong>Exterior color:</strong>
+  <%= @car.Exterior_Color %>
+</p>
+
+<p>
+  <strong>Interior color:</strong>
+  <%= @car.Interior_Color %>
+</p>
+
+<p>
+  <strong>Passenger capacity:</strong>
+  <%= @car.Passenger_Capacity %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @car.Price %>
+</p>
+
+<%= link_to 'Edit', edit_car_path(@car) %> |
+<%= link_to 'Back', cars_path %>

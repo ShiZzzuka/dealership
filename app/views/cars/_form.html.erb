@@ -1,0 +1,62 @@
+<%= form_with(model: car) do |form| %>
+  <% if car.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(car.errors.count, "error") %> prohibited this car from being saved:</h2>
+
+      <ul>
+        <% car.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Model %>
+    <%= form.text_field :Model %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Engine_Type %>
+    <%= form.text_field :Engine_Type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Drive_Type %>
+    <%= form.text_field :Drive_Type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Transmission %>
+    <%= form.text_field :Transmission %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Exterior_Color %>
+    <%= form.text_field :Exterior_Color %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Interior_Color %>
+    <%= form.text_field :Interior_Color %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Passenger_Capacity %>
+    <%= form.number_field :Passenger_Capacity %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Price %>
+    <%= form.text_field :Price %>
+  </div>
+
+	<div class="field">
+		<%= form.label :images %>
+		<%= form.file_field :images, multiple: true %>
+	</div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

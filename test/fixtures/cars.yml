@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Model: MyString
+  Engine_Type: MyString
+  Drive_Type: MyString
+  Transmission: MyString
+  Exterior_Color: MyString
+  Interior_Color: MyString
+  Passenger_Capacity: 
+  Price: MyString
+
+two:
+  Model: MyString
+  Engine_Type: MyString
+  Drive_Type: MyString
+  Transmission: MyString
+  Exterior_Color: MyString
+  Interior_Color: MyString
+  Passenger_Capacity: 
+  Price: MyString
