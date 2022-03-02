@@ -1,51 +1,51 @@
+<div class="">
+  <div class="row">
+    <div class="col-8" style="padding-left: 0px;  padding-right: 0px;">
+			<% @car.images.each do |image| %>
+			<div data-controller="lightbox" class="images">
+				<%= image_tag(image, class:"img-fluid") %>
+			</div>
+			<% end %>
+    </div>
+    <div class="col-4 text-start border pt-4 pb-4 ml-lg-4">
+			<div class="card text-white bg-dark mb-3">
+					<div class="card-body">
+						<h2 class="card-title"><%= @car.Model %></h2>
+						<h3 class="card-text"><%= @car.Price %></h3>
+						<h5 class="card-text">Overview</h5>
+					</div>
+					<ul class="list-group list-group-flush">
+						<li class="list-group-item text-white bg-dark mb-3">
+								<strong>Engine Type:</strong>
+								<%= @car.Engine_Type %>
+						</li>
+						<li class="list-group-item text-white bg-dark mb-3">
+								<strong>Drive Type:</strong>
+								<%= @car.Drive_Type %>
+						</li>
+						<li class="list-group-item text-white bg-dark mb-3">
+								<strong>Transmission:</strong>
+								<%= @car.Transmission %>
+						</li>
+						<li class="list-group-item text-white bg-dark mb-3">
+							<strong>Exterior Color:</strong>
+							<%= @car.Exterior_Color %>
+						</li>
+						<li class="list-group-item text-white bg-dark mb-3">
+								<strong>Interior Color:</strong>
+								<%= @car.Interior_Color %>
+						</li>
+						<li class="list-group-item text-white bg-dark mb-3">
+								<strong>Passenger Capacity:</strong>
+								<%= @car.Passenger_Capacity %>
+						</li>
+					</ul>
+					<div class="card-body">
+						<%= link_to 'Edit', edit_car_path(@car) %> |
+						<%= link_to 'Back', cars_path %>
+				</div>
+    </div>
+  </div>
+</div>
 <p id="notice"><%= notice %></p>
 
-
-<% @car.images.each do |image| %>
-<div>
-	<%= image_tag(image, width: "50%") %>
-</div>
-<% end %>
-
-<p>
-  <strong>Model:</strong>
-  <%= @car.Model %>
-</p>
-
-<p>
-  <strong>Engine type:</strong>
-  <%= @car.Engine_Type %>
-</p>
-
-<p>
-  <strong>Drive type:</strong>
-  <%= @car.Drive_Type %>
-</p>
-
-<p>
-  <strong>Transmission:</strong>
-  <%= @car.Transmission %>
-</p>
-
-<p>
-  <strong>Exterior color:</strong>
-  <%= @car.Exterior_Color %>
-</p>
-
-<p>
-  <strong>Interior color:</strong>
-  <%= @car.Interior_Color %>
-</p>
-
-<p>
-  <strong>Passenger capacity:</strong>
-  <%= @car.Passenger_Capacity %>
-</p>
-
-<p>
-  <strong>Price:</strong>
-  <%= @car.Price %>
-</p>
-
-<%= link_to 'Edit', edit_car_path(@car) %> |
-<%= link_to 'Back', cars_path %>

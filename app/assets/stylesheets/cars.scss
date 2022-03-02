@@ -1,3 +1,20 @@
 // Place all the styles related to the Cars controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+table {
+  width: 100%;
+  table-layout: fixed;
+}
+
+.carousel .carousel-item {
+  height: 450px;
+}
+
+.carousel-item img {
+    position: absolute;
+    object-fit:cover;
+    top: 0;
+    left: 0;
+		bottom: 25%;
+    max-height: 450px;
+}

@@ -13,6 +13,10 @@ import "bootstrap/dist/css/bootstrap"
 
 import "stylesheets/application"
 
+import "lightgallery.js/dist/css/lightgallery.min.css"
+
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+
+import "controllers"
