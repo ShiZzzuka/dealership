@@ -1,14 +1,14 @@
 class CreateCars < ActiveRecord::Migration[6.1]
   def change
     create_table :cars do |t|
-      t.string :Model
-      t.string :Engine_Type
-      t.string :Drive_Type
-      t.string :Transmission
-      t.string :Exterior_Color
-      t.string :Interior_Color
-      t.integer :Passenger_Capacity
-      t.string :Price
+      t.string :model
+      t.string :engine_type
+      t.string :drive_type
+      t.string :transmission
+      t.string :exterior_color
+      t.string :interior_color
+      t.integer :passenger_capacity
+      t.string :price
 
       t.timestamps
     end

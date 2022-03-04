@@ -11,52 +11,58 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :Model %>
-    <%= form.text_field :Model %>
+  <div class="mb-3">
+    <%= form.label :Brand %>
+		<br/>
+    <%= form.collection_select :brand_id, @brands, :id, :name, include_blank: true %>
   </div>
 
-  <div class="field">
-    <%= form.label :Engine_Type %>
-    <%= form.text_field :Engine_Type %>
+  <div class="mb-3">
+    <%= form.label :Model, 'Model' %>
+    <%= form.text_field :Model, class:"form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :Drive_Type %>
-    <%= form.text_field :Drive_Type %>
+  <div class="mb-3">
+    <%= form.label :Engine_Type, 'Engine Type' %>
+    <%= form.text_field :Engine_Type, class:"form-control" %>
   </div>
 
-  <div class="field">
+  <div class="mb-3">
+    <%= form.label :Drive_Type, 'Drive Type' %>
+    <%= form.text_field :Drive_Type, class:"form-control" %>
+  </div>
+
+  <div class="mb-3">
     <%= form.label :Transmission %>
-    <%= form.text_field :Transmission %>
+    <%= form.text_field :Transmission, class:"form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :Exterior_Color %>
-    <%= form.text_field :Exterior_Color %>
+  <div class="mb-3">
+    <%= form.label :Exterior_Color, 'Exterior Color' %>
+    <%= form.text_field :Exterior_Color, class:"form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :Interior_Color %>
-    <%= form.text_field :Interior_Color %>
+  <div class="mb-3">
+    <%= form.label :Interior_Color, 'Interior Color' %>
+    <%= form.text_field :Interior_Color, class:"form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :Passenger_Capacity %>
-    <%= form.number_field :Passenger_Capacity %>
+  <div class="mb-3">
+    <%= form.label :Passenger_Capacity, 'Passenger Capacity' %>
+    <%= form.number_field :Passenger_Capacity, class:"form-control" %>
   </div>
 
-  <div class="field">
+  <div class="mb-3">
     <%= form.label :Price %>
-    <%= form.text_field :Price %>
+    <%= form.text_field :Price, class:"form-control" %>
   </div>
 
-	<div class="field">
+	<div class="mb-3">
 		<%= form.label :images %>
-		<%= form.file_field :images, multiple: true %>
+		<%= form.file_field :images, multiple: true, class:"form-control" %>
 	</div>
-
+	<br/>
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit class:"btn btn-secondary" %>
   </div>
 <% end %>

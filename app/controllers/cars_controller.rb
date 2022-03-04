@@ -8,10 +8,12 @@ class CarsController < ApplicationController
 
   # GET /cars/1 or /cars/1.json
   def show
+		@brands = Brand.all
   end
 
   # GET /cars/new
   def new
+		@brands = Brand.all
     @car = Car.new
   end
 
@@ -21,6 +23,7 @@ class CarsController < ApplicationController
 
   # POST /cars or /cars.json
   def create
+		@brands = Brand.all
     @car = Car.new(car_params)
 
     respond_to do |format|
@@ -57,6 +60,8 @@ class CarsController < ApplicationController
     end
   end
 
+	
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_car
@@ -65,6 +70,6 @@ class CarsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def car_params
-      params.require(:car).permit(:Model, :Engine_Type, :Drive_Type, :Transmission, :Exterior_Color, :Interior_Color, :Passenger_Capacity, :Price, images: [])
+      params.require(:car).permit(:brand, :model, :engine_type, :drive_type, :transmission, :exterior_color, :interior_color, :passenger_capacity, :price, images: [])
     end
 end

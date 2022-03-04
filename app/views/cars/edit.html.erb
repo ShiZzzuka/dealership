@@ -1,6 +1,8 @@
-<h1>Editing Car</h1>
-
-<%= render 'form', car: @car %>
-
-<%= link_to 'Show', @car %> |
-<%= link_to 'Back', cars_path %>
+<div class="container">
+	<h1>Edit Car</h1>
+	<br/>
+	<%= render 'form', car: @car %>
+	<br/>
+	<%= link_to 'Show', @car, class:"btn btn-secondary" %> |
+	<%= link_to 'Back', cars_path, class:"btn btn-secondary" %>
+</div>

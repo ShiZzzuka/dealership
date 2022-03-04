@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_26_202230) do
+ActiveRecord::Schema.define(version: 2022_03_02_110516) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -40,19 +40,28 @@ ActiveRecord::Schema.define(version: 2022_02_26_202230) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
-  create_table "cars", force: :cascade do |t|
-    t.string "Model"
-    t.string "Engine_Type"
-    t.string "Drive_Type"
-    t.string "Transmission"
-    t.string "Exterior_Color"
-    t.string "Interior_Color"
-    t.integer "Passenger_Capacity"
-    t.string "Price"
+  create_table "brands", force: :cascade do |t|
+    t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "cars", force: :cascade do |t|
+    t.string "model"
+    t.string "engine_type"
+    t.string "drive_type"
+    t.string "transmission"
+    t.string "exterior_color"
+    t.string "interior_color"
+    t.integer "passenger_capacity"
+    t.string "price"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "brand_id"
+    t.index ["brand_id"], name: "index_cars_on_brand_id"
+  end
+
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "cars", "brands"
 end
