@@ -14,47 +14,47 @@
   <div class="mb-3">
     <%= form.label :Brand %>
 		<br/>
-    <%= form.collection_select :brand_id, @brands, :id, :name, include_blank: true %>
+    <%= form.collection_select :brand_id, @brands, :id, :name, :include_blank => 'Select brand' %>
   </div>
 
   <div class="mb-3">
-    <%= form.label :Model, 'Model' %>
-    <%= form.text_field :Model, class:"form-control" %>
+    <%= form.label :model, 'Model' %>
+    <%= form.text_field :model, class:"form-control" %>
   </div>
 
   <div class="mb-3">
-    <%= form.label :Engine_Type, 'Engine Type' %>
-    <%= form.text_field :Engine_Type, class:"form-control" %>
+    <%= form.label :engine_type, 'Engine Type' %>
+    <%= form.text_field :engine_type, class:"form-control" %>
   </div>
 
   <div class="mb-3">
-    <%= form.label :Drive_Type, 'Drive Type' %>
-    <%= form.text_field :Drive_Type, class:"form-control" %>
+    <%= form.label :drive_type, 'Drive Type' %>
+    <%= form.text_field :drive_type, class:"form-control" %>
   </div>
 
   <div class="mb-3">
-    <%= form.label :Transmission %>
-    <%= form.text_field :Transmission, class:"form-control" %>
+    <%= form.label :transmission %>
+    <%= form.text_field :transmission, class:"form-control" %>
   </div>
 
   <div class="mb-3">
-    <%= form.label :Exterior_Color, 'Exterior Color' %>
-    <%= form.text_field :Exterior_Color, class:"form-control" %>
+    <%= form.label :exterior_color, 'Exterior Color' %>
+    <%= form.text_field :exterior_color, class:"form-control" %>
   </div>
 
   <div class="mb-3">
-    <%= form.label :Interior_Color, 'Interior Color' %>
-    <%= form.text_field :Interior_Color, class:"form-control" %>
+    <%= form.label :interior_color, 'Interior Color' %>
+    <%= form.text_field :interior_color, class:"form-control" %>
   </div>
 
   <div class="mb-3">
-    <%= form.label :Passenger_Capacity, 'Passenger Capacity' %>
-    <%= form.number_field :Passenger_Capacity, class:"form-control" %>
+    <%= form.label :passenger_capacity, 'Passenger Capacity' %>
+    <%= form.number_field :passenger_capacity, class:"form-control" %>
   </div>
 
   <div class="mb-3">
-    <%= form.label :Price %>
-    <%= form.text_field :Price, class:"form-control" %>
+    <%= form.label :price %>
+    <%= form.text_field :price, class:"form-control" %>
   </div>
 
 	<div class="mb-3">

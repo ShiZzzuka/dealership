@@ -18,3 +18,9 @@ table {
 		bottom: 25%;
     max-height: 450px;
 }
+
+.contact a:after {
+	content: '|';
+	padding-left: .5em;
+	padding-right: .5em;
+}

@@ -19,6 +19,7 @@ class CarsController < ApplicationController
 
   # GET /cars/1/edit
   def edit
+		@brands = Brand.all
   end
 
   # POST /cars or /cars.json
@@ -39,6 +40,7 @@ class CarsController < ApplicationController
 
   # PATCH/PUT /cars/1 or /cars/1.json
   def update
+		@brands = Brand.all
     respond_to do |format|
       if @car.update(car_params)
         format.html { redirect_to car_url(@car), notice: "Car was successfully updated." }
@@ -70,6 +72,6 @@ class CarsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def car_params
-      params.require(:car).permit(:brand, :model, :engine_type, :drive_type, :transmission, :exterior_color, :interior_color, :passenger_capacity, :price, images: [])
+      params.require(:car).permit(:brand_id, :model, :engine_type, :drive_type, :transmission, :exterior_color, :interior_color, :passenger_capacity, :price, images: [])
     end
 end
