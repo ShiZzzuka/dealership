@@ -1,8 +1,24 @@
-<div class="container text-center">
-	<p>
-	Brand: <%= @brand.name %>
-	</p>
-	<p>
-	Logo: <%= @brand.image %>
-	</p>
+<p id="notice"><%= notice %></p>
+<div class="container text-center">	
+	<h1><%= @brand.name %></h1>
 </div>
+<br/>
+<div class="container border small text-center">
+	<br/>
+	<div class="row row-cols-1 row-cols-md-3">
+  <% @brand.cars.each do |car| %>
+      <div class="col-md-3">
+        <div class="card h-100">
+          <%= link_to (image_tag car.images.first, class: 'card-img-top', height: 300, width: 300), car if car.images.attached?%>
+          <div class="card-body">
+            <h5 class="card-title"> <%= link_to car.model, car %></h5>
+          </div>
+        </div>
+      </div>
+  <% end %>
+</div>
+<br/>
+</div>
+
+<%= link_to 'Edit', edit_brand_path(@brand) %> |
+<%= link_to 'Back', brands_path %>
